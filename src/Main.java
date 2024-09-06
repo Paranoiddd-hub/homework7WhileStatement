@@ -4,12 +4,14 @@ public class Main {
         System.out.println("    Task 1");
 
         int inMonth = 15_000;
-        int total = 0;
+        double total = 0;
         int i = 1;
 
-        for (; total <= 2_459_000; i++) {
+        while (total <= 2_459_000) {
             total += inMonth;
-            System.out.printf("Месяц %d, сумма накоплений равна %d рублей %n", i, total);
+            total += total * 0.01;
+            System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей %n", i, total);
+            i++;
         }
 
         System.out.println();
@@ -119,8 +121,12 @@ public class Main {
         //Task 8
         System.out.println("    Task 8");
 
-        for (int i8 = 0; i8 <= 2024 + 100; i8 += 79) {
-            if (i8 > (2024 - 200)) {
+        int currentYear = 2024;
+        int twoHundredBefore = currentYear - 200;
+        int hundredAfter = currentYear + 100;
+
+        for (int i8 = twoHundredBefore; i8 <= hundredAfter ; i8++) {
+            if (i8 % 79 == 0) {
                 System.out.println(i8);
             }
         }
