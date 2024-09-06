@@ -52,13 +52,11 @@ public class Main {
         //Task 4
         System.out.println("    Task 4");
 
-        int inMonth4 = 15000;
-        double total4 = 0;
+        double total4 = 15000;
         double percent = 0.07;
         int i4 = 1;
 
         while (total4 <= 12_000_000) {
-            total4 = total4 + inMonth4;
             total4 = total4 + total4 * percent;
             System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей %n", i4, total4);
             i4++;
